@@ -109,6 +109,6 @@ public class CurrentConditionsFragment extends Fragment implements Callback<Curr
     @Override
     public void failure(RetrofitError error) {
         Log.e(LOG_KEY, "Error retrieving current conditions", error);
-        Toast.makeText(getActivity(), R.string.current_conditions_error, Toast.LENGTH_LONG).show();
+        setTextView(rootView, R.id.loading_message, getString(R.string.current_conditions_error));
     }
 }
